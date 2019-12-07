@@ -8,6 +8,8 @@ py_voiceは日本語の音声入力でのプログラミング（ボイスコー
 2. Speak in Japanese into the microphone (within 20 minutes because the timeout is 20 seconds).
 3. If you say syuuro(終了) or owari(終わり), speech recognition will end.
 
-1.コンソールで```python py_voice```を実行します  
+1.コンソールで```python py_voice```を実行します
+
 2.マイクに向かって日本語で喋りかけます(タイムアウトが20秒なのでその時間内で)
+
 3.終了、または終わりと言ったら音声認識を終了します
