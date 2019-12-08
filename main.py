@@ -155,7 +155,7 @@ def listen_print_loop(responses):
             # one of our keywords.
             # if re.search(r'\b(exit|quit)\b', transcript, re.I):
             if re.search(r'\b(終わり|終了)\b', transcript, re.I):
-                print('Exiting..')
+                print('終了しています..')
                 break
 
             num_chars_printed = 0
