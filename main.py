@@ -3,8 +3,8 @@ from . import gui
 
 
 def main():
-    speechtext = st.main()
-    print(speechtext)
+    speech_text = st.main()
+    print(speech_text)
 
 
 if __name__ == '__main__':
