@@ -6,6 +6,7 @@ from kivy.uix.label import Label
 
 class TestApp(App):
     def return_text(self):
+        self.title = 'py_voice'
         return Label(text='Hello World')
 
 

@@ -4,6 +4,7 @@ from . import gui
 
 def main():
     speech_text = st.main()
+    gui.TestApp(speech_text)
     print(speech_text)
 
 
