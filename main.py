@@ -1,11 +1,11 @@
-from . import speech_to_text as st
-from . import gui
+import speech_to_text as st
+import gui
 
 
 def main():
-    speech_text = st.main()
-    gui.TestApp(speech_text)
-    print(speech_text)
+    st.main()
+    gui.TestApp()
+    print("test")
 
 
 if __name__ == '__main__':
