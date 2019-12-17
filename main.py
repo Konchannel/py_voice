@@ -4,7 +4,7 @@ import gui
 
 def main():
     st.main()
-    gui.TestApp()
+    gui.TestApp().run()
     print("test")
 
 

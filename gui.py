@@ -10,4 +10,5 @@ class TestApp(App):
         return Label(text='Hello World')
 
 
-TestApp().run()
+if __name__ == '__main__':
+    TestApp().run()
