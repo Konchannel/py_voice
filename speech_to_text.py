@@ -37,7 +37,8 @@ def main():
         responses = client.streaming_recognize(streaming_config, requests,timeout=59000)
 
         # Now, put the transcription responses to use.
-        listen_print_loop(responses)
+        speech_str = listen_print_loop(responses)
+        return speech_str
 
 
 class MicrophoneStream(object):
@@ -121,6 +122,7 @@ def listen_print_loop(responses):
     final one, print a newline to preserve the finalized transcription.
     """
     num_chars_printed = 0
+    speech_str = ""
     for response in responses:
         if not response.results:
             continue
@@ -156,7 +158,10 @@ def listen_print_loop(responses):
             # if re.search(r'\b(exit|quit)\b', transcript, re.I):
             if re.search(r'\b(終わり|終了)\b', transcript, re.I):
                 print('終了しています..')
-                break
+                return speech_str
+
+            else:
+                speech_str += transcript
 
             num_chars_printed = 0
 

@@ -3,9 +3,10 @@ import gui
 
 
 def main():
-    st.main()
-    gui.TestApp().run()
-    print("test")
+    response_str = st.main()
+    # gui.TestApp().run()
+    gui.TestApp().build(response_str)  # 画面表示が残るようにしなければ
+    print(response_str)
 
 
 if __name__ == '__main__':

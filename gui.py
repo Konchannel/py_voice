@@ -5,9 +5,9 @@ from kivy.uix.label import Label
 
 
 class TestApp(App):
-    def build(self):
+    def build(self, response_str):
         self.title = 'py_voice'
-        return Label(text='Hello World')
+        return Label(text=response_str)
 
 
 if __name__ == '__main__':
