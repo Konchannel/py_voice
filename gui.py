@@ -7,7 +7,7 @@ from kivy.uix.label import Label
 class TestApp(App):
     def build(self, response_str):
         self.title = 'py_voice'
-        return Label(text=response_str)
+        return Label(text=response_str)  # ,Button(text="OK")
 
 
 if __name__ == '__main__':
