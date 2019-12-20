@@ -3,9 +3,10 @@
 py_voice provides programming with Japanese voice input (voice coding).
 
 ## How to use
-1. Run ```python py_voice``` in console.
-2. Speak in Japanese into the microphone .
-3. If you say syuuro(終了) or owari(終わり), speech recognition will end.
+1. ```set GOOGLE_APPLICATION_CREDENTIALS=[credentials file pass]```
+2. Run ```python main.py``` in console.
+3. Speak in Japanese into the microphone .
+4. If you say syuuro(終了) or owari(終わり), speech recognition will end.
 
   
 # 日本語
@@ -13,11 +14,13 @@ py_voice provides programming with Japanese voice input (voice coding).
 py_voiceは日本語の音声入力でのプログラミング（ボイスコーディング）を提供します
 
 ## 使い方
-1.コンソールで```python py_voice```を実行します
+1.```set GOOGLE_APPLICATION_CREDENTIALS=[credentials file pass]```
 
-2.マイクに向かって日本語で喋りかけます
+2.コンソールで```python py_voice```を実行します
 
-3.終了、または終わりと言ったら音声認識を終了します
+3.マイクに向かって日本語で喋りかけます
+
+4.終了、または終わりと言ったら音声認識を終了します
 
 ## GUIライブラリ(Kivy)を使用するためにインストールするもの
 pip install --upgraade pip wheel setuptools

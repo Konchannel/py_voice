@@ -5,9 +5,14 @@ from kivy.uix.label import Label
 
 
 class TestApp(App):
+    message = "NOT MESSAGE"
+
     def build(self):
         self.title = 'py_voice'
-        return Label(text="GUI Example: Sample :)")  # ,Button(text="OK")
+        return Label(text=TestApp.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
+
+    def get_message(self, mes):
+        TestApp.message = mes
 
 
 if __name__ == '__main__':
