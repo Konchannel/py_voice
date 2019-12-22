@@ -161,7 +161,7 @@ def listen_print_loop(responses):
                 return speech_str
 
             else:
-                speech_str += transcript
+                speech_str = speech_str + transcript + "\n"
 
             num_chars_printed = 0
 

@@ -11,7 +11,7 @@ class TestApp(App):
         self.title = 'py_voice'
         return Label(text=TestApp.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
 
-    def get_message(self, mes):
+    def set_message(self, mes):
         TestApp.message = mes
 
 
