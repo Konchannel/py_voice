@@ -1,13 +1,16 @@
-import edit_message
+from edit_message import edit_py_format as edit_py
 import speech_to_text as st
 import gui
 
 
 def main():
-    response_message = st.main()
-    gui.TestApp().set_message(response_message)
+    message_str = st.main()
+    edited_str = edit_py(message_str)
+    gui.TestApp().set_message(edited_str)
     gui.TestApp().run()
-    print(response_message)
+    print(message_str)
+    print("-----")
+    print(edited_str)
 
 
 if __name__ == '__main__':
