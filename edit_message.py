@@ -26,6 +26,33 @@ def edit_py_format(message):
     message = re.sub('', "!=", message)
     message = re.sub('', "<", message)
     message = re.sub('', ">", message)
+    message = re.sub('', "is", message)
+
+    # Type
+    message = re.sub('', "int", message)
+    message = re.sub('', "float", message)
+
+    # Operator
+    message = re.sub('', "+", message)
+    message = re.sub('', "-", message)
+    message = re.sub('', "*", message)
+    message = re.sub('', "/", message)
+    message = re.sub('', "//", message)
+    message = re.sub('', "%", message)
+    message = re.sub('', "abs", message)
+    message = re.sub('', "complex", message)
+    message = re.sub('', "conjugate", message)
+    message = re.sub('', "divmod", message)
+    message = re.sub('', "pow", message)
+    # message = re.sub('', "**", message)
+
+    # bitwise operation
+    message = re.sub('', "|", message)
+    message = re.sub('', "^", message)
+    message = re.sub('', "&", message)
+    message = re.sub('', "~", message)
+    # message = re.sub('', "<<", message)
+    # message = re.sub('', ">>", message)
 
     message = re.sub('', "as", message)
     message = re.sub('', "assert", message)
@@ -46,7 +73,6 @@ def edit_py_format(message):
     message = re.sub('', "if", message)
     message = re.sub('', "import", message)
     message = re.sub('', "in", message)
-    message = re.sub('', "is", message)
     message = re.sub('', "lambda", message)
     message = re.sub('', "nonlocal", message)
     message = re.sub('', "pass", message)
