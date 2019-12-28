@@ -15,18 +15,18 @@ def edit_py_format(message):
     message = re.sub('フォルス|ホルス', "False", message)
     message = re.sub('no|No|のん', "None", message)
     message = re.sub('TRUEルー|TRUE', "True", message)
-    message = re.sub('ゴア', "or", message)
-    message = re.sub('アンド|&', "and", message)
-    message = re.sub('マット', "not", message)
+    message = re.sub('ゴア', " or ", message)
+    message = re.sub('アンド|&', " and ", message)
+    message = re.sub('マット', " not ", message)
 
     # Comparison
-    message = re.sub('小なりイコール', "<=", message)
-    message = re.sub('大なりイコール', ">=", message)
-    message = re.sub('==', "==", message)
-    message = re.sub('ノットイコール', "!=", message)
-    message = re.sub('小なり', "<", message)
-    message = re.sub('大なり', ">", message)
-    message = re.sub('伊豆', "is", message)
+    message = re.sub('小なりイコール', " <= ", message)
+    message = re.sub('大なりイコール', " >= ", message)
+    message = re.sub('==', " == ", message)
+    message = re.sub('ノットイコール', " != ", message)
+    message = re.sub('小なり', " < ", message)
+    message = re.sub('大なり', " > ", message)
+    message = re.sub('伊豆', " is ", message)
 
     # Type
     message = re.sub('', "int", message)
