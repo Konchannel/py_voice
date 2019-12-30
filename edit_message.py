@@ -11,6 +11,10 @@ def edit_py_format(message):
     message = re.sub('プリント', 'print', message)
     message = re.sub('ダブルクォーテーション', '"', message)
     message = re.sub('クォーテーション', "'", message)
+    message = re.sub('', ":", message)
+    message = re.sub('', "  ", message)
+    message = re.sub('', "\\", message)
+
     # bool
     message = re.sub('フォルス|ホルス', "False", message)
     message = re.sub('no|No|のん', "None", message)

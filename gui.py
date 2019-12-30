@@ -5,7 +5,7 @@ from kivy.uix.label import Label
 
 
 class TestApp(App):
-    message = "NOT MESSAGE"
+    message = "NOT INPUT MESSAGE"
 
     def build(self):
         self.title = 'py_voice'
