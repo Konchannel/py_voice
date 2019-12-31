@@ -16,7 +16,7 @@ py_voiceは日本語の音声入力でのプログラミング（ボイスコー
 ## 使い方
 1.```set GOOGLE_APPLICATION_CREDENTIALS=[credentials file pass]```
 
-2.コンソールで```python py_voice```を実行します
+2.コンソールで```python main.py```を実行します
 
 3.マイクに向かって日本語で喋りかけます
 
