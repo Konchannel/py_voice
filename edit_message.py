@@ -11,9 +11,6 @@ def edit_py_format(message):
     message = re.sub('プリント', 'print', message)
     message = re.sub('ダブルクォーテーション', '"', message)
     message = re.sub('クォーテーション', "'", message)
-    message = re.sub('', ":", message)
-    message = re.sub('', "  ", message)
-    message = re.sub('', "\\", message)
 
     # bool
     message = re.sub('フォルス|ホルス', "False", message)
@@ -32,6 +29,9 @@ def edit_py_format(message):
     message = re.sub('大なり', " > ", message)
     message = re.sub('伊豆', " is ", message)
 
+    return message
+
+'''
     # Type
     message = re.sub('', "int", message)
     message = re.sub('', "float", message)
@@ -58,6 +58,9 @@ def edit_py_format(message):
     # message = re.sub('', "<<", message)
     # message = re.sub('', ">>", message)
 
+    message = re.sub('', ":", message)
+    message = re.sub('', "  ", message)
+    message = re.sub('', "\\", message)
     message = re.sub('', "as", message)
     message = re.sub('', "assert", message)
     message = re.sub('', "async", message)
@@ -86,13 +89,13 @@ def edit_py_format(message):
     message = re.sub('', "while", message)
     message = re.sub('', "with", message)
     message = re.sub('', "yield", message)
+'''
 
-    '''
+'''
       '(', ')', '{', '}', '[', ']'
       'False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break',
       'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for',
       'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not',
       'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'
-    '''
+'''
 
-    return message
