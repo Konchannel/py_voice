@@ -6,8 +6,7 @@ import gui
 def main():
     message_str = st.main()
     edited_str = edit_py(message_str)
-    gui.TestApp().set_message(edited_str)
-    gui.TestApp().run()
+    gui.print_gui(edited_str)
     print(message_str)
     print("-----")
     print(edited_str)

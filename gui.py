@@ -4,16 +4,19 @@ from kivy.app import App
 from kivy.uix.label import Label
 
 
+def print_gui(get_message):
+    ta = TestApp()
+    ta.set_message(get_message)
+    ta.run()
+
+
 class TestApp(App):
-    message = "NOT INPUT MESSAGE"
+    message = "not message"
 
     def build(self):
         self.title = 'py_voice'
-        return Label(text=TestApp.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
+        return Label(text=self.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
 
-    def set_message(self, mes):
-        TestApp.message = mes
+    def set_message(self, message):
+        self.message = message
 
-
-if __name__ == '__main__':
-    TestApp().run()
