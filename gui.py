@@ -11,12 +11,13 @@ def print_gui(get_message):
 
 
 class TestApp(App):
-    message = "not message"
+    message = "no message"
 
     def build(self):
-        self.title = 'py_voice'
-        return Label(text=self.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
+        TestApp.title = 'py_voice'
+        return Label(text=TestApp.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
 
-    def set_message(self, message):
-        self.message = message
+    @staticmethod
+    def set_message(message):
+        TestApp.message = message
 
