@@ -29,6 +29,10 @@ def edit_py_format(message):
     message = re.sub('大なり', " > ", message)
     message = re.sub('伊豆', " is ", message)
 
+    # NewLine
+    message = re.sub('\n', "", message)
+    message = re.sub('改行', "\n", message)
+
     return message
 
 '''
