@@ -19,8 +19,9 @@ class TestApp(App):
         super(TestApp, self).__init__()
 
     def build(self):
-        TestApp.title = 'py_voice'
-        return Label(text=self.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
+        self.title = 'py_voice'
+        return Label(text=self.message, font_name="C:\WINDOWS\FONTS\MEIRYO.TTC",
+                     text_size=(700, 600), halign='left', valign='top')
 
     def set_message(self, message):
         self.message = message
