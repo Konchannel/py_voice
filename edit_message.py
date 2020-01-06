@@ -1,7 +1,10 @@
+# coding:utf-8
 import re
 
 
 def edit_py_format(message):
+
+    # basic
     message = re.sub('かくかっことじる|角括弧とじる|角括弧閉じる', ']', message)
     message = re.sub('角括弧|角カッコ', '[', message)
     message = re.sub('中学校とじる|中学校閉じる|中括弧とじる|中括弧閉じる', '}', message)
@@ -35,7 +38,7 @@ def edit_py_format(message):
 
     return message
 
-'''
+    '''
     # Type
     message = re.sub('', "int", message)
     message = re.sub('', "float", message)
@@ -93,13 +96,13 @@ def edit_py_format(message):
     message = re.sub('', "while", message)
     message = re.sub('', "with", message)
     message = re.sub('', "yield", message)
-'''
+    '''
 
-'''
+    '''
       '(', ')', '{', '}', '[', ']'
       'False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break',
       'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for',
       'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not',
       'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'
-'''
+    '''
 
