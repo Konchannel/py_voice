@@ -34,7 +34,7 @@ def main():
         requests = (types.StreamingRecognizeRequest(audio_content=content)
                     for content in audio_generator)
 
-        responses = client.streaming_recognize(streaming_config, requests,timeout=59000)
+        responses = client.streaming_recognize(streaming_config, requests, timeout=59000)
 
         # Now, put the transcription responses to use.
         speech_str = listen_print_loop(responses)
@@ -161,8 +161,6 @@ def listen_print_loop(responses):
                 return speech_str
 
             else:
-
-                
                 speech_str = speech_str + transcript + "\n"
 
             num_chars_printed = 0
