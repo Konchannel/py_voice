@@ -8,7 +8,7 @@ def operate_file():
 
 
 def update_file(file_name, edited_message):
-    with open(".\{}.py".format(file_name), mode='x') as file:
+    with open(".\{}.py".format(file_name), mode='x', encoding='utf-8') as file:
         file.write(edited_message)
 
 
