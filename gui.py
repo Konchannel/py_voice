@@ -11,7 +11,8 @@ def print_gui(get_message):
         get_message = "not input message"
 
     ta = TestApp(get_message)
-    ta.input_loop("hoge")
+    # ta.input_loop("hoge")
+    ta.update_label(ta.la, ta.message)
 
     ta.run()
 
