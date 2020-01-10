@@ -22,8 +22,7 @@ class TestApp(App):
         super(TestApp, self).__init__()
         self.message = get_message
         self.title = 'py_voice'
-        self.la = Label(text="not input message", font_name="C:\WINDOWS\FONTS\MEIRYO.TTC",
-                        text_size=(700, 600), halign='left', valign='top')
+        self.la = Label(font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
 
     def build(self):
         return self.la
