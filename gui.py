@@ -10,16 +10,16 @@ def print_gui(get_message):
     if get_message is "":
         get_message = "not input message"
 
-    ta = TestApp(get_message)
+    ta = MyApp(get_message)
     # ta.input_loop("hoge")
     ta.update_label(ta.la, ta.message)
 
     ta.run()
 
 
-class TestApp(App):
+class MyApp(App):
     def __init__(self, get_message):
-        super(TestApp, self).__init__()
+        super(MyApp, self).__init__()
         self.message = get_message
         self.title = 'py_voice'
         self.la = Label(font_name="C:\WINDOWS\FONTS\MEIRYO.TTC")
