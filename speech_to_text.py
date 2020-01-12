@@ -9,6 +9,8 @@ from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
 
+import gui
+
 # Audio recording parameters
 RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
@@ -147,6 +149,7 @@ def listen_print_loop(responses):
         if not result.is_final:
             sys.stdout.write(transcript + overwrite_chars + '\r')
             sys.stdout.flush()
+            # gui.MyApp.update_label(ta, ta.la, transcript + overwrite_chars)
 
             num_chars_printed = len(transcript)
 
