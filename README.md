@@ -1,6 +1,6 @@
 # English
 ## What is py_voice?
-py_voice provides programming with Japanese voice input (voice coding).
+py_voice provides programming with Japanese voice input (Voice Coding).
 
 ## How to use
 1. ```set GOOGLE_APPLICATION_CREDENTIALS=[credentials file pass]```

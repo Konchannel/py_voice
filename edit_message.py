@@ -14,13 +14,15 @@ def edit_py_format(message):
     message = re.sub('Print|プリント', 'print', message)
     message = re.sub('ダブルクォーテーション', '"', message)
     message = re.sub('クォーテーション', "'", message)
+    message = re.sub('コロン|コロ', ":", message)
+    message = re.sub('インデント', "  ", message)
 
     # bool
     message = re.sub('フォルス|ホルス', "False", message)
     message = re.sub('no|No|のん', "None", message)
     message = re.sub('TRUEルー|TRUE', "True", message)
-    message = re.sub('ゴア', " or ", message)
-    message = re.sub('アンド|&', " and ", message)
+    message = re.sub('BoA|おあ|とは|ゴア', " or ", message)
+    message = re.sub('アンド|&|安藤', " and ", message)
     message = re.sub('マット', " not ", message)
 
     # Comparison
@@ -31,78 +33,55 @@ def edit_py_format(message):
     message = re.sub('小なり', " < ", message)
     message = re.sub('大なり', " > ", message)
     message = re.sub('伊豆', " is ", message)
+    message = re.sub('イン', "in", message)
 
     # NewLine
     message = re.sub('\n', "", message)
     message = re.sub('改行', "\n", message)
 
-    return message
-
-    '''
     # Type
-    message = re.sub('', "int", message)
-    message = re.sub('', "float", message)
+    message = re.sub('意味と|インド', "int", message)
+    message = re.sub('フロート', "float", message)
+    message = re.sub('string|STR', "str", message)
 
     # Operator
-    message = re.sub('', "+", message)
-    message = re.sub('', "-", message)
-    message = re.sub('', "*", message)
-    message = re.sub('', "/", message)
-    message = re.sub('', "//", message)
-    message = re.sub('', "%", message)
-    message = re.sub('', "abs", message)
-    message = re.sub('', "complex", message)
-    message = re.sub('', "conjugate", message)
-    message = re.sub('', "divmod", message)
-    message = re.sub('', "pow", message)
-    # message = re.sub('', "**", message)
+    message = re.sub('グラス|フラップ|ブラスト', "+", message)
+    message = re.sub('マイナス', "-", message)
+    message = re.sub('かける|アスタリスク', "*", message)
+    message = re.sub('ダブルバックスラッシュ|DOUBLE backslashシュ', "\\\\", message)
+    message = re.sub('ダブルスラッシュ', "//", message)
+    message = re.sub('わる|スラッシュ', "/", message)
+    message = re.sub('パーセント', "%", message)
 
-    # bitwise operation
-    message = re.sub('', "|", message)
-    message = re.sub('', "^", message)
-    message = re.sub('', "&", message)
-    message = re.sub('', "~", message)
-    # message = re.sub('', "<<", message)
-    # message = re.sub('', ">>", message)
+    # Import
+    message = re.sub('from', "from", message)
+    message = re.sub('import', "import", message)
+    message = re.sub('アズ|アブ|あず|ある', "as", message)
 
-    message = re.sub('', ":", message)
-    message = re.sub('', "  ", message)
-    message = re.sub('', "\\", message)
-    message = re.sub('', "as", message)
-    message = re.sub('', "assert", message)
-    message = re.sub('', "async", message)
-    message = re.sub('', "await", message)
-    message = re.sub('', "break", message)
-    message = re.sub('', "class", message)
-    message = re.sub('', "continue", message)
-    message = re.sub('', "def", message)
-    message = re.sub('', "del", message)
-    message = re.sub('', "elif", message)
-    message = re.sub('', "else", message)
-    message = re.sub('', "except", message)
-    message = re.sub('', "finally", message)
-    message = re.sub('', "for", message)
-    message = re.sub('', "from", message)
-    message = re.sub('', "global", message)
-    message = re.sub('', "if", message)
-    message = re.sub('', "import", message)
-    message = re.sub('', "in", message)
-    message = re.sub('', "lambda", message)
-    message = re.sub('', "nonlocal", message)
-    message = re.sub('', "pass", message)
-    message = re.sub('', "raise", message)
-    message = re.sub('', "return", message)
-    message = re.sub('', "try", message)
-    message = re.sub('', "while", message)
-    message = re.sub('', "with", message)
-    message = re.sub('', "yield", message)
-    '''
+    # Def
+    message = re.sub('グラス|クラス|フラッシュ', "class", message)
+    message = re.sub('DEF|ジェフ|レフ', "def", message)
 
-    '''
-      '(', ')', '{', '}', '[', ']'
-      'False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break',
-      'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for',
-      'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not',
-      'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'
-    '''
+    # Conditional branch
+    message = re.sub('IF|いふ|岐阜|皮膚', "if", message)
+    message = re.sub('LE 5|Le 4|LE|LF|LEC|エリック', "elif", message)
+    message = re.sub('ELse', "else", message)
+
+    # Loop
+    message = re.sub('4|フォー', "for", message)
+    message = re.sub('はいる', "while", message)
+    message = re.sub('ラムダ', "lambda", message)
+    message = re.sub('グレープ|ブレーク|ブレイク', "break", message)
+    message = re.sub('コンティニュー|コンビニ', "continue", message)
+    message = re.sub('パス|バス|明日', "pass", message)
+    message = re.sub('リターン', "return", message)
+
+    # Other
+    message = re.sub('レンジ', "range", message)
+    message = re.sub('トライ', "try", message)
+    message = re.sub('ウィズ', "with", message)
+    message = re.sub('エクセプト|accept', "except", message)
+    message = re.sub('Finallyル', "finally", message)
+
+    return message
 
