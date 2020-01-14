@@ -1,6 +1,6 @@
 # English
 ## What is py_voice?
-py_voice provides programming with Japanese voice input (Voice Coding).
+py_voice provides programming with Japanese voice input (voice coding).
 
 ## How to use
 1. ```set GOOGLE_APPLICATION_CREDENTIALS=[credentials file pass]```
@@ -8,7 +8,7 @@ py_voice provides programming with Japanese voice input (Voice Coding).
 3. Speak in Japanese into the microphone .
 4. If you say syuuro(終了) or owari(終わり), speech recognition will end.
 ※Inputs exceeding 400 seconds will expire. Please enter within 400 seconds.
-  
+
 # 日本語
 ## py_voiceとは？
 py_voiceは日本語の音声入力でのプログラミング（ボイスコーディング）を提供します
@@ -34,3 +34,11 @@ pip install kivy.deps.gstreamer
 pip install kivy.deps.angle
 
 pip install --upgrade kivy
+
+## Google speech-to-text apiを使用するためにインストールするもの
+pip install --upgrade google-cloud-speech
+
+## py-audioを使用するためにインストールするもの
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+より、自分のバージョンに対応した.whlファイルをインストール
+(cpXXのXX部分がpythonのバージョン)
