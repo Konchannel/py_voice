@@ -9,21 +9,22 @@ def edit_py_format(message):
     message = re.sub('角括弧|角カッコ', '[', message)
     message = re.sub('中学校とじる|中学校閉じる|中括弧とじる|中括弧閉じる', '}', message)
     message = re.sub('中学校|中括弧|中カッコ', '{', message)
-    message = re.sub('かっことじる|かっこ閉じる|括弧とじる|括弧閉じる', ')', message)
-    message = re.sub('かっこ|括弧', '(', message)
+    message = re.sub('かっことじる|かっこ閉じる|括弧とじる|括弧閉じる|カッコウ', ')', message)
+    message = re.sub('かっこ|括弧|恰好|学校', '(', message)
     message = re.sub('Print|プリント', 'print', message)
-    message = re.sub('ダブルクォーテーション', '"', message)
+    message = re.sub('ダブルクォーテーション|ダブルコーテーション', '"', message)
     message = re.sub('クォーテーション', "'", message)
     message = re.sub('コロン|コロ', ":", message)
     message = re.sub('インデント', "  ", message)
+    message = re.sub('メイン|めいん', "main", message)
 
     # bool
     message = re.sub('フォルス|ホルス', "False", message)
-    message = re.sub('no|No|のん', "None", message)
+    message = re.sub('マット|Not|not', "not ", message)
+    message = re.sub('ノー|ローン|のん', "None", message)
     message = re.sub('TRUEルー|TRUE', "True", message)
     message = re.sub('BoA|おあ|とは|ゴア', " or ", message)
     message = re.sub('アンド|&|安藤', " and ", message)
-    message = re.sub('マット', " not ", message)
 
     # Comparison
     message = re.sub('小なりイコール', " <= ", message)
@@ -37,7 +38,7 @@ def edit_py_format(message):
 
     # NewLine
     message = re.sub('\n', "", message)
-    message = re.sub('改行', "\n", message)
+    message = re.sub('改行|開業', "\n", message)
 
     # Type
     message = re.sub('意味と|インド', "int", message)
@@ -59,8 +60,8 @@ def edit_py_format(message):
     message = re.sub('アズ|アブ|あず|ある', "as", message)
 
     # Def
-    message = re.sub('グラス|クラス|フラッシュ', "class", message)
-    message = re.sub('DEF|ジェフ|レフ', "def", message)
+    message = re.sub('グラス|クラス|フラッシュ', "class ", message)
+    message = re.sub('Def|DEF|デフ|ジェフ|レフ|デファイン', "def ", message)
 
     # Conditional branch
     message = re.sub('IF|いふ|岐阜|皮膚', "if", message)
@@ -77,11 +78,10 @@ def edit_py_format(message):
     message = re.sub('リターン', "return", message)
 
     # Other
-    message = re.sub('レンジ', "range", message)
+    message = re.sub('レンジ|RANGE', "range", message)
     message = re.sub('トライ', "try", message)
     message = re.sub('ウィズ', "with", message)
     message = re.sub('エクセプト|accept', "except", message)
     message = re.sub('Finallyル', "finally", message)
 
     return message
-
