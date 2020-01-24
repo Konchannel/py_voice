@@ -25,7 +25,7 @@ py_voiceは日本語の音声入力でのプログラミング（ボイスコー
 ※400秒を超える入力はタイムアウトします。400秒以内で入力してください
 
 ## GUIライブラリ(Kivy)を使用するためにインストールするもの
-pip install --upgraade pip wheel setuptools
+pip install --upgrade pip wheel setuptools
 
 pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
 
@@ -36,7 +36,7 @@ pip install kivy.deps.angle
 pip install --upgrade kivy
 
 ## Google speech-to-text apiを使用するためにインストールするもの
- 
+
 pip install --upgrade google-cloud-speech
 
 ## py-audioを使用するためにインストールするもの
