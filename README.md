@@ -35,6 +35,7 @@ pip install kivy.deps.angle
 
 pip install --upgrade kivy
 
+<<<<<<< HEAD
 ## Google speech-to-text apiを使用するためにインストールするもの
 pip install --upgrade google-cloud-speech
 
@@ -42,3 +43,14 @@ pip install --upgrade google-cloud-speech
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
 より、自分のバージョンに対応した.whlファイルをインストール
 (cpXXのXX部分がpythonのバージョン)
+=======
+## Google speech-to-text apiを使用するためにインストールするもの 
+pip install --upgrade google-cloud-speech 
+
+## py-audioを使用するためにインストールするもの 
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio 
+
+より、自分のバージョンに対応した.whlファイルをインストール 
+
+(cpXXのXX部分がpythonのバージョン) 
+>>>>>>> e8b608cda133f3cdc5490d7627252b857276aa59

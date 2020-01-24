@@ -16,6 +16,7 @@ def edit_py_format(message):
     message = re.sub('クォーテーション', "'", message)
     message = re.sub('コロン|コロ', ":", message)
     message = re.sub('インデント', "  ", message)
+<<<<<<< HEAD
     message = re.sub('メイン|めいん', "main", message)
 
     # bool
@@ -25,6 +26,18 @@ def edit_py_format(message):
     message = re.sub('TRUEルー|TRUE', "True", message)
     message = re.sub('BoA|おあ|とは|ゴア', " or ", message)
     message = re.sub('アンド|&|安藤', " and ", message)
+=======
+    message = re.sub('アンダースコア', "_", message)
+    message = re.sub('ダンダー', "__init__", message)
+
+    # bool
+    message = re.sub('フォルス|ホルス', "False", message)
+    message = re.sub('TRUEルー|TRUE', "True", message)
+    message = re.sub('BoA|おあ|とは|ゴア', " or ", message)
+    message = re.sub('アンド|&|安藤', " and ", message)
+    message = re.sub('マット', " not ", message)
+    message = re.sub('ノー|ローン|のん', "None", message)
+>>>>>>> e8b608cda133f3cdc5490d7627252b857276aa59
 
     # Comparison
     message = re.sub('小なりイコール', " <= ", message)
@@ -46,10 +59,10 @@ def edit_py_format(message):
     message = re.sub('string|STR', "str", message)
 
     # Operator
-    message = re.sub('グラス|フラップ|ブラスト', "+", message)
-    message = re.sub('マイナス', "-", message)
+    message = re.sub('たす|足す|グラス|フラップ|ブラスト', "+", message)
+    message = re.sub('ひく|引く|マイナス', "-", message)
     message = re.sub('かける|アスタリスク', "*", message)
-    message = re.sub('ダブルバックスラッシュ|DOUBLE backslashシュ', "\\\\", message)
+    message = re.sub('ダブルバックスラッシュ|DOUBLE backslash|DOUBLE backslashシュ', "\\\\", message)
     message = re.sub('ダブルスラッシュ', "//", message)
     message = re.sub('わる|スラッシュ', "/", message)
     message = re.sub('パーセント', "%", message)
@@ -61,7 +74,11 @@ def edit_py_format(message):
 
     # Def
     message = re.sub('グラス|クラス|フラッシュ', "class ", message)
+<<<<<<< HEAD
     message = re.sub('Def|DEF|デフ|ジェフ|レフ|デファイン', "def ", message)
+=======
+    message = re.sub('DEF|ジェフ|レフ', "def", message)
+>>>>>>> e8b608cda133f3cdc5490d7627252b857276aa59
 
     # Conditional branch
     message = re.sub('IF|いふ|岐阜|皮膚', "if", message)
